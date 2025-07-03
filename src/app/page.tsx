@@ -25,7 +25,7 @@ if(!socket){
   return( 
     <div>
       <input value={input} onChange={(e)=>setInput(e.target.value)}/>
-      <button onClick={()=>setMesseges(input)}>Send</button>
+      <button onClick={()=>socket.send(input)}>Send</button>
            {messeages && (
             <p>{messeages}</p>
            )}
